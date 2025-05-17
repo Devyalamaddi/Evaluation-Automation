@@ -314,6 +314,25 @@ class TutlyGrader:
                 self.evaluate_assignment(assignment)
                 time.sleep(1)  # Wait between assignments
                 
+            # After all assignments are done, navigate to assignments page and logout
+            print("\nAll assignments processed. Logging out...")
+            self.driver.get("https://learn.tutly.in/tutor/assignments/getByAssignment")
+            time.sleep(2)  # Wait for page load
+            
+            try:
+                # Click the profile menu button
+                profile_menu = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#radix-\:r3R1i\:")))
+                profile_menu.click()
+                time.sleep(1)  # Wait for dropdown
+                
+                # Click the logout option
+                logout_button = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#radix-\:r3R1iH1\: > a > div")))
+                logout_button.click()
+                print("Successfully logged out")
+                
+            except Exception as e:
+                print(f"Failed to logout: {str(e)}")
+                
         except Exception as e:
             print(f"Processing failed: {str(e)}")
         finally:
