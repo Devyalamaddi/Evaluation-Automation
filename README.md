@@ -24,7 +24,11 @@ An automated tool to grade assignments on the Tutly learning platform.
    TUTLY_EMAIL=your_email@example.com
    TUTLY_PASSWORD=your_password
    ```
-
+5. Create a venv:
+   ```bash
+      python -m venv venv
+      source venv/bin/activate
+   ```
 ## Usage
 
 Run the grader:
