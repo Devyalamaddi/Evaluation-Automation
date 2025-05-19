@@ -1,6 +1,6 @@
-# Tutly Assignment Grader
+# Assignment Grader
 
-An automated tool to grade assignments on the Tutly learning platform.
+An automated tool to grade assignments
 
 ## Prerequisites
 
@@ -19,10 +19,10 @@ An automated tool to grade assignments on the Tutly learning platform.
    ```bash
    cp .env.example .env
    ```
-4. Update the `.env` file with your Tutly credentials:
+4. Update the `.env` file with your credentials:
    ```
-   TUTLY_EMAIL=your_email@example.com
-   TUTLY_PASSWORD=your_password
+   EMAIL=your_email@example.com
+   PASSWORD=your_password
    ```
 5. Create a venv:
    ```bash
@@ -33,12 +33,12 @@ An automated tool to grade assignments on the Tutly learning platform.
 
 Run the grader:
 ```bash
-python tutly_grader.py
+python grader.py
 ```
 
 ## Features
 
-- Automated login to Tutly platform
+- Automated login to platform
 - Navigation to assignments section
 - Identification of assignments requiring review
 - Automated grading process
